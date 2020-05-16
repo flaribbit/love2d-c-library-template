@@ -1,2 +1,4 @@
 *.exe
 test.dll
+obj
+libs
