@@ -1,4 +1,5 @@
-package.cpath='/sdcard/?.so;/sdcard/lib?.so;'..package.cpath
+package.cpath='/data/data/org.love2d.android.embed/files/save/archive/lib?.so;'..package.cpath
+love.filesystem.write("libtest.so", love.filesystem.read("libtest.so"))
 require "test"
 local ss=''
 function love.load()
@@ -8,9 +9,5 @@ function love.load()
 end
 
 function love.draw()
-    love.graphics.print(ss,0,0)
-    love.graphics.print('getUserDirectory: '..love.filesystem.getUserDirectory(),0,20)
-    love.graphics.print('getSaveDirectory: '..love.filesystem.getSaveDirectory(),0,40)
-    love.graphics.print('getWorkingDirectory: '..love.filesystem.getWorkingDirectory(),0,60)
-    love.graphics.print('getAppdataDirectory: '..love.filesystem.getAppdataDirectory(),0,80)
+    love.graphics.print(ss,0,100)
 end
